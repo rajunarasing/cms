@@ -1,0 +1,11 @@
+<%= simple_form_for @user do |f| %>
+  <%= render "shared/error_messages", :target => @user %>  
+  <%= f.input :name %>
+  <%= f.input :email %>
+  <%= f.input :address %>
+  <%= f.input :dob %>
+  <%= f.input :phone_num %>
+  <%= f.input :doj %>
+  <%= f.select :user_type, options_for_select([["Select One", ""], "Admin", "Student", "Teacher", "Management", "Others"]), :class => 'genForm_dropBox' %>
+  <%= f.button :submit %>
+<% end %> 

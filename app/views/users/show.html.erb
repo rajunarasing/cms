@@ -1,0 +1,29 @@
+<p>
+  <b>Name:</b>
+  <%= @user.name %>
+</p>
+
+<b>User Type:</b>
+  <%= @user.user_type %>
+</p>
+
+<b>Email:</b>
+  <%= @user.email %>
+</p>
+
+<b>Address:</b>
+  <%= @user.address %>
+</p>
+
+<b>Date of Birth:</b>
+  <%= @user.dob %>
+</p>
+
+<b>Phone Number:</b>
+  <%= @user.phone_num %>
+</p>
+
+<b>Date of Joining:</b>
+  <%= @user.doj %>
+</p>
+<%= link_to "Edit", edit_user_path(@user) %>
