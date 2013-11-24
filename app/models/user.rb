@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   attr_accessible :address, :dob, :doj, :email, :name, :phone_num, :user_type
-
+  has_and_belongs_to_many :courses
   validates :address, :dob, :doj, :email, :name, :phone_num, :user_type , :presence => true
   validates :name, :presence => { :message => "Name is required" }
   validates :phone_num, :numericality => true ,:length => { :maximum => 10}
