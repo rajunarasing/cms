@@ -1,5 +1,5 @@
 <h1>List of Users</h1>
-    <table border="2">
+    <table class="table table-striped">
   <tr>
     <th>User Name</th>
     <th>User Type</th>
@@ -11,16 +11,16 @@
   </tr>
 <% @users.each do |user| %>
    <tr>
-       <td><%= user.name %></td>
+       <td><%= link_to user.name, user_path(user) %></td>
        <td><%= user.user_type %></td>
        <td><%= user.email %></td>
        <td><%= user.address %></td>
        <td><%= user.dob %></td>
        <td><%= user.phone_num %></td>
        <td><%= user.doj %></td>
-       <td> <%= link_to "Show", user %></td>
-      <td> <%= link_to "Edit", edit_user_path(user) %></td>
-      <td> <%= link_to "Delete", user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+       <td> <%#= link_to "Show", user, :class => 'btn btn-mini' %></td>
+      <td> <%= link_to "Edit", edit_user_path(user), :class => 'btn btn-mini btn-primary' %></td>
+      <td> <%= link_to "Delete", user, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-mini btn-danger' %></td>
        <%#= link_to "Delete User", new_user_path %>
    </tr>
 <% end %>
